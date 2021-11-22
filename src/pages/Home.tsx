@@ -1,32 +1,33 @@
+import React from "react";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-    container: {
-        minHeight: '100vh',
-        background: 'linear-gradient(#e66465, #9198e5)'
-    },
-    titleContainer: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        margin: '10vh 10vw',
-        fontFamily: 'Barlow',
-        fontSize: '30px',
-    },
+  container: {
+    background:
+      "linear-gradient(45deg, rgb(255, 255, 179, 1), rgb(255, 255, 179, 0.6))",
+    height: "100vh",
+    position: "relative",
+  },
+  mainContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    height: "100%",
+  },
+  text: {
+    fontSize: "10vw",
+    margin: "auto",
+  },
+});
 
-  });
+export const Home = () => {
+  const classes = useStyles();
 
-
-export const HomePage = () => {
-
-    const classes = useStyles();
-
-    return (
+  return (
     <div className={classes.container}>
-      <div className={classes.titleContainer} id="header">
-        <div>Charles App</div>
-        <div>Comming soon</div>
-        <div>Stay tuned</div>
+      <div className={classes.mainContainer}>
+        <div className={classes.text}>Starting soon ...</div>
       </div>
     </div>
-    );
-}
+  );
+};

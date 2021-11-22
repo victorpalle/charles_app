@@ -1,9 +1,16 @@
-import './App.css';
-import { HomePage } from './pages/Home';
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { GuestSwitch } from "./routes/GuestSwitch";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-      <HomePage />
+    <>
+      <Navbar />
+      <Router>
+        <GuestSwitch />
+      </Router>
+    </>
   );
 }
 
